@@ -472,16 +472,21 @@
             const urlImagenAbsoluta = `https://juanpablo054ruiz-sourse.github.io/Bell-sima-mano/${imagenRamo}`;
 
             // Armamos el mensaje para WhatsApp
-            const mensaje = `¡Hola! Quiero comprar el siguiente producto en Bellísima Manor:
-🌸 *${nombreRamo}*
+            // Armamos el mensaje para WhatsApp limpio
+const mensaje = `¡Hola! Quiero comprar el siguiente producto en Bellísima Manor:
+💐 *${nombreRamo}*
 💰 Precio: ${precioRamo}
 🖼️ Imagen de referencia: ${urlImagenAbsoluta}`;
 
-            const mensajeCodificado = encodeURIComponent(mensaje);
+const mensajeCodificado = encodeURIComponent(mensaje);
 
-            // Reemplaza con tu número de WhatsApp de empresa (ej: 573001234567)
-            const numeroWhatsApp = "573224270043"; 
+// Reemplaza con tu número de WhatsApp de empresa
+const numeroWhatsapp = "573224270043";
 
+// Abrir WhatsApp con el mensaje listo
+const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${mensajeCodificado}`;
+window.open(urlWhatsapp, '_blank');
+            
             // Abrir WhatsApp con el mensaje listo
             const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
             window.open(urlWhatsApp, '_blank');
