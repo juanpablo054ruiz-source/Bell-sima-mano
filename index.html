@@ -468,7 +468,7 @@
             const nombreRamo = tarjeta.querySelector('h3').textContent;
             const precioRamo = tarjeta.querySelector('p').textContent;
 
-          
+     const urlImagenAbsoluta = window.location.origin + '/' + imagenRamo;
             // Armamos el mensaje para WhatsApp limpio
 const mensaje = `¡Hola! Quiero comprar el siguiente producto en Bellísima Mano:
 💐 *${nombreRamo}*
@@ -484,7 +484,7 @@ const numeroWhatsapp = "573224270043";
 const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${mensajeCodificado}`;
 window.open(urlWhatsapp, '_blank');
     });
-    });
+});
 </script>
     </body>
 </html>
